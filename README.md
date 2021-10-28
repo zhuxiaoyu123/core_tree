@@ -6,6 +6,7 @@ The core genes dosen't mean they present in every species, instead they can be a
 some species. You only need to provide fasta files which contain homologous genes from different 
 genomes and ensure sequence names in the right format as described in "Requirement" part.
 Dependency: MAFTT, TrimAl, fasttree or iqtree and seqkit. Please ensure they have been installed ahead.
+
 Example: 
 ##concatenate sequences:       
 perl $0 -p faa -o core_tree
@@ -16,10 +17,13 @@ Options:
 	-o -outdir <dir>             required, the output folder
 	-t -tree <tree menthod>      optional, two options: "iqtree" or "fasttree"
 	-h -help                     print help information
+
+
 Requirement:
 The sequence names must be composed of genome name and gene id with "__" as separator:
 >MAG6666__gene001
 >MAG7777__gene002
+	
 To meet this requirement, we suggest you add the genome names in front of each gene once you get the gene sequence of each genome,
 which is a good habit and is benefit for your downstream analyses.
 You can simply conduct the following command in your directory of faa files:
